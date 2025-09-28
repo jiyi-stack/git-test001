@@ -491,12 +491,14 @@
                         <i class="fas fa-robot"></i>
                         <span>AI 模块</span>
                         <i class="fas fa-chevron-down chevron"></i>
+                    <li class="submenu-item" data-page="rules">规则系统</li>
+                    <li class="submenu-item" data-page="attendance">外包考勤系统</li>
+                    <li class="submenu-item" data-page="sunshine">阳光灵思图</li>
+
                     </li>
                     <li class="submenu">
                         <ul>
-                            <li class="submenu-item" data-page="rules">规则系统</li>
-                            <li class="submenu-item" data-page="attendance">外包考勤系统</li>
-                            <li class="submenu-item" data-page="sunshine">阳光灵思图</li>
+
                         </ul>
                     </li>
                     <li class="menu-item" data-page="plugins">
@@ -517,7 +519,8 @@
                 </div>
                 <div class="welcome-card">
                     <p class="welcome-text">
-                        我们的平台致力于为企业提供全方位的自动化解决方案。通过整合脚本自动化、AI 智能处理以及丰富的插件系统，帮助您提升工作效率，实现业务流程的智能化升级。
+                        本平台是一款集成了脚本自动化与AI大模型的综合工具，
+                        减少重复性劳动，帮助用户提高工作效率；对接内部系统，利用AI大模型技术处理综合性问题，实现业务流程的智能化升级。
                     </p>
 
                     <div class="feature-grid">
@@ -546,66 +549,78 @@
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <!-- 最近更新 -->
-            <section class="updates-section">
-                <div class="section-header">
-                    <h2 class="page-title">最近更新功能</h2>
-                    <button class="check-update-btn">
-                        <i class="fas fa-sync-alt"></i>
-                        检查版本
-                    </button>
-                </div>
-                <div class="updates-card">
-                    <div class="update-list">
-                        <div class="update-item">
-                            <div class="update-bullet" id="item-1"></div>
-                            <div class="update-content">
-                                <h3 class="update-title">外包考勤系统新增考勤信息下载表格功能</h3>
-                                <p class="update-description">下载考勤信息，包含每日打卡数据，每月工时汇总/加班/调休工时等信息</p>
-                                <p class="update-date">2024-01-15</p>
+                <!-- 最近更新 -->
+                <section class="updates-section">
+                    <div class="section-header">
+                        <h2 class="page-title">最近更新功能</h2>
+                        <button class="check-update-btn">
+                            <i class="fas fa-sync-alt"></i>
+                            检查版本
+                        </button>
+                    </div>
+                    <div class="updates-card">
+                        <div class="update-list">
+                            <div class="update-item">
+                                <div class="update-bullet" id="item-1"></div>
+                                <div class="update-content">
+                                    <h3 class="update-title">外包考勤系统新增考勤信息下载表格功能</h3>
+                                    <p class="update-description">下载考勤信息，包含每日打卡数据，每月工时汇总/加班/调休工时等信息</p>
+                                    <p class="update-date">2024-01-15</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="update-item">
-                            <div class="update-bullet" id="item-2"></div>
-                            <div class="update-content">
-                                <h3 class="update-title">脚本录制功能升级</h3>
-                                <p class="update-description">新增智能操作识别，提高识别速度，减少在录制卡顿的现象</p>
-                                <p class="update-date">2024-01-10</p>
+                            <div class="update-item">
+                                <div class="update-bullet" id="item-2"></div>
+                                <div class="update-content">
+                                    <h3 class="update-title">脚本录制功能升级</h3>
+                                    <p class="update-description">新增智能操作识别，提高识别速度，减少在录制卡顿的现象</p>
+                                    <p class="update-date">2024-01-10</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="update-item">
-                            <div class="update-bullet" id="item-3"></div>
-                            <div class="update-content">
-                                <h3 class="update-title">新增脚本插件</h3>
-                                <p class="update-description">新增脚本插件Pdf处理工具插件，支持合并，压缩pdf文件</p>
-                                <p class="update-date">2024-01-05</p>
+                            <div class="update-item">
+                                <div class="update-bullet" id="item-3"></div>
+                                <div class="update-content">
+                                    <h3 class="update-title">新增脚本插件</h3>
+                                    <p class="update-description">新增脚本插件Pdf处理工具插件，支持合并，压缩pdf文件</p>
+                                    <p class="update-date">2024-01-05</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="update-item">
-                            <div class="update-bullet" id="item-4"></div>
-                            <div class="update-content">
-                                <h3 class="update-title">脚本录制跳转交互优化</h3>
-                                <p class="update-description">跳转逻辑发生变化，点击录制后直接开启全屏记录</p>
-                                <p class="update-date">2024-01-02</p>
+                            <div class="update-item">
+                                <div class="update-bullet" id="item-4"></div>
+                                <div class="update-content">
+                                    <h3 class="update-title">脚本录制跳转交互优化</h3>
+                                    <p class="update-description">跳转逻辑发生变化，点击录制后直接开启全屏记录</p>
+                                    <p class="update-date">2024-01-02</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="update-item">
-                            <div class="update-bullet" id="item-5"></div>
-                            <div class="update-content">
-                                <h3 class="update-title">脚本录制功能升级</h3>
-                                <p class="update-description">新增智能变量识别，提高时别速度，减少在录制卡顿的现象</p>
-                                <p class="update-date">2024-01-01</p>
+                            <div class="update-item">
+                                <div class="update-bullet" id="item-5"></div>
+                                <div class="update-content">
+                                    <h3 class="update-title">脚本录制功能升级</h3>
+                                    <p class="update-description">新增智能变量识别，提高时别速度，减少在录制卡顿的现象</p>
+                                    <p class="update-date">2024-01-01</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </section>
+
+            <!-- 脚本自动化内容 -->
+            <section class="automation-section">
+                <div>脚本自动化内容</div>
+            </section>
+
+            <!-- AI模块 -->
+            <section class="ai-section">
+                <div>AI模块</div>
+            </section>
+
+
         </main>
     </div>
 
