@@ -24,6 +24,16 @@
         </li>
 
         <li
+          class="menu-item"
+          :class="{ active: currentPage === 'plugins' }"
+          data-page="plugins"
+          @click="handleItemClick('plugins')"
+        >
+          <i class="fas fa-puzzle-piece"></i>
+          <span>展示插件</span>
+        </li>
+
+        <li
           class="menu-item has-submenu"
           :class="{ active: currentPage === 'ai-modules' }"
           data-page="ai-modules"
@@ -65,16 +75,6 @@
               阳光灵思图
             </li>
           </ul>
-        </li>
-
-        <li
-          class="menu-item"
-          :class="{ active: currentPage === 'plugins' }"
-          data-page="plugins"
-          @click="handleItemClick('plugins')"
-        >
-          <i class="fas fa-puzzle-piece"></i>
-          <span>展示插件</span>
         </li>
       </ul>
     </nav>

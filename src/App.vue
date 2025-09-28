@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div class="MainContainer">
     <!-- 左侧菜单 -->
     <SidebarMenu :current-page="currentPage" @page-change="handlePageChange" />
 
@@ -52,7 +52,7 @@ body {
 }
 
 /* 主布局 */
-.main-container {
+.MainContainer {
   display: flex;
   min-height: 100vh;
 }

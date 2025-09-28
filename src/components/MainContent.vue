@@ -1,5 +1,5 @@
 <template>
-  <main class="content-wrapper">
+  <main class="contentWrapper">
     <!-- 首页内容 -->
     <WelcomeSection v-if="currentPage === 'home'" />
 
@@ -54,7 +54,7 @@ export default {
 
 <style scoped>
 /* 右侧内容区 */
-.content-wrapper {
+.contentWrapper {
   margin-left: 256px;
   flex: 1;
   padding: 32px;
@@ -62,7 +62,7 @@ export default {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-  .content-wrapper {
+  .contentWrapper {
     margin-left: 0;
     padding: 16px;
   }
