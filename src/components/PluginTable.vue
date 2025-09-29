@@ -1,8 +1,8 @@
 <template>
   <div class="page-header">
-    <h1>展示插件</h1>
+    <h1>插件支持</h1>
     <p class="page-description">
-      浏览和使用我们提供的各种插件，提升您的工作效率
+      脚本内置多个插件，您可以根据不同场景选择使用，以下是所有可用的插件列表：
     </p>
   </div>
   <div class="page-container">
@@ -20,7 +20,7 @@
             <tr v-for="plugin in plugins" :key="plugin.id">
               <td class="col-name">
                 <div class="plugin-name">
-                  <img src="../assets/plugings.svg" alt="" />
+                  <!-- <img src="../assets/plugings.svg" alt="" /> -->
                   {{ plugin.name }}
                 </div>
               </td>
@@ -81,7 +81,7 @@ export default {
       plugins: [
         {
           id: 1,
-          name: '截图工具',
+          name: '✨ 截图工具',
           usage:
             ' 点击截图，选择区域坐标定点截图，同时还可将截图复制到剪贴板、保存到自定义的位置，选择区域坐标定点截图，同时还可将截图复',
           screenshots: [
@@ -92,49 +92,49 @@ export default {
         },
         {
           id: 2,
-          name: '键盘输入',
+          name: '✨ 键盘输入',
           usage: ' 增加文本输入的步骤，支持输入文本、选择文本、复制文本等操作',
           screenshots: [
-            require('@/assets/capture1.png'),
-            require('@/assets/capture1.png')
+            require('@/assets/capture4.png'),
+            require('@/assets/capture4.png')
           ]
         },
         {
           id: 3,
-          name: '鼠标点击',
+          name: '✨ 鼠标点击',
           usage: ' 插入鼠标点击的操作，支持通过图像、坐标点击',
           screenshots: [require('@/assets/capture1.png')]
         },
         {
           id: 4,
-          name: '启动应用程序',
+          name: '✨ 启动应用程序',
           usage: ' 可以选择指定的应用程序或快捷方式，由脚本自动启动',
           screenshots: [
-            require('@/assets/capture1.png'),
-            require('@/assets/capture1.png')
+            require('@/assets/capture2.png'),
+            require('@/assets/capture3.png')
           ]
         },
         {
           id: 5,
-          name: '桌面显示/隐藏',
+          name: '✨ 桌面显示/隐藏',
           usage: ' 选择隐藏后，不管桌面打开多少个页面，都会直接显示桌面类似于',
           screenshots: [
-            require('@/assets/capture1.png'),
-            require('@/assets/capture1.png')
+            require('@/assets/capture2.png'),
+            require('@/assets/capture4.png')
           ]
         },
         {
           id: 6,
-          name: '窗口最大化/最小化',
+          name: '✨ 窗口最大化/最小化',
           usage: ' 点击可选择最大化/最小化的应用',
           screenshots: [
-            require('@/assets/capture1.png'),
-            require('@/assets/capture1.png')
+            require('@/assets/capture4.png'),
+            require('@/assets/capture3.png')
           ]
         },
         {
           id: 7,
-          name: '获取窗口对象',
+          name: '✨ 获取窗口对象',
           usage:
             ' 可以通过窗口标题和类名获取窗口对象，以后在操作指定应用程序时用',
           screenshots: [

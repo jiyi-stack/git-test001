@@ -3,8 +3,9 @@
     <div class="page-header">
       <h1 class="page-title">阳光灵思图</h1>
       <p style="color: #666">
-        阳光灵思图是基于Eclipse
-        RCP架构与Java语言开发，支持Windows、Mac、Linux及移动端操作系统。其核心功能涵盖思维导图、鱼骨图、组织结构图等多样化图表绘制，并提供甘特图转换、云端同步及与Office软件的无缝集成，支持导出至Word、PPT等十余种格式。您可点击访问<a
+        阳光灵思图核心功能涵盖思维导图、鱼骨图、组织结构图等多样化图表绘制，
+        支持导出至Word、PPT、JPEG等多种格式，支持在线协同编辑思维导图，新增评论功能，更多功能正在开发中，敬请期待！
+        点击即可免密登录阳光灵思图、流程图：<a
           href="https://www.iconfont.cn/"
           target="_blank"
           >https://sunshine-ideas.xmind.net/</a
@@ -14,7 +15,7 @@
 
     <div class="sunshine-content">
       <div class="sunshine-tools">
-        <img src="@/assets/xmind.jpg" alt="点击跳转页面" @click="goXmind" />
+        <img src="@/assets/xmind.jpg" @click="goXmind" />
       </div>
     </div>
   </section>

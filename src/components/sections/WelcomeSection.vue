@@ -27,7 +27,7 @@
           </div>
           <h3 class="feature-title">AI 模块</h3>
           <p class="feature-description">
-            对接多个，包含规则系统、考勤管理、智能分析等，助力AI协助工作，提升效率。
+            对接多个系统，包含规则系统、考勤管理、智能分析等，助力AI协助工作，提升效率。
           </p>
         </div>
 

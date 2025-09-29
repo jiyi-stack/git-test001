@@ -2,17 +2,26 @@
   <section class="ai-modules-section">
     <div class="page-header">
       <h1 class="page-title">AI 模块</h1>
-      <p class="page-description">集成多种智能功能，助力企业实现数字化转型和智能化升级</p>
+      <p class="page-description">
+        如何使用AI智能对话，将从三个对接系统分别介绍使用方法：
+      </p>
     </div>
 
     <div class="ai-modules-content">
-      <div class="modules-grid">
+      <ul>
+        <li>规则系统</li>
+        <li>外包考勤系统</li>
+        <li>阳光灵思图</li>
+      </ul>
+      <!-- <div class="modules-grid">
         <div class="module-card" @click="navigateToModule('rules')">
           <div class="module-icon">
             <i class="fas fa-brain"></i>
           </div>
           <h3 class="module-title">规则系统</h3>
-          <p class="module-description">基于规则的智能决策引擎，支持复杂业务逻辑的自动化处理</p>
+          <p class="module-description">
+            基于规则的智能决策引擎，支持复杂业务逻辑的自动化处理
+          </p>
           <div class="module-link">
             <span>了解更多</span>
             <i class="fas fa-arrow-right"></i>
@@ -24,7 +33,9 @@
             <i class="fas fa-calendar-check"></i>
           </div>
           <h3 class="module-title">外包考勤系统</h3>
-          <p class="module-description">智能考勤管理，支持多种考勤规则和自动化处理流程</p>
+          <p class="module-description">
+            智能考勤管理，支持多种考勤规则和自动化处理流程
+          </p>
           <div class="module-link">
             <span>了解更多</span>
             <i class="fas fa-arrow-right"></i>
@@ -36,13 +47,15 @@
             <i class="fas fa-lightbulb"></i>
           </div>
           <h3 class="module-title">阳光灵思图</h3>
-          <p class="module-description">AI辅助创意工具，提供智能分析和创意生成功能</p>
+          <p class="module-description">
+            AI辅助创意工具，提供智能分析和创意生成功能
+          </p>
           <div class="module-link">
             <span>了解更多</span>
             <i class="fas fa-arrow-right"></i>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -77,9 +90,12 @@ export default {
 
 /* AI模块内容 */
 .ai-modules-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  margin-left: 24px;
+  color: #2563eb;
+}
+
+ul li {
+  margin-bottom: 8px;
 }
 
 .modules-grid {
