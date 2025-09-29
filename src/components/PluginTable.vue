@@ -41,7 +41,11 @@
                       :key="index"
                       class="screenshot-item"
                     >
-                      <img :src="screenshot" class="plugin-screenshot" />
+                      <img
+                        :src="screenshot"
+                        class="plugin-screenshot"
+                        @click="toggleImageEnlarge(screenshot)"
+                      />
                     </div>
                   </div>
                   <div v-else class="no-screenshots">暂无截图</div>
@@ -51,6 +55,20 @@
           </tbody>
         </table>
       </div>
+    </div>
+
+    <!-- 图片放大遮罩层 -->
+    <div
+      v-if="isImageEnlarged"
+      class="image-overlay"
+      @click="
+        () => {
+          isImageEnlarged = false
+          enlargedImage = null
+        }
+      "
+    >
+      <img :src="enlargedImage" class="enlarged-image" @click.stop />
     </div>
   </div>
 </template>
@@ -125,7 +143,22 @@ export default {
             require('@/assets/capture1.png')
           ]
         }
-      ]
+      ],
+      enlargedImage: null, // 存储当前放大的图片URL
+      isImageEnlarged: false // 控制图片是否放大的状态
+    }
+  },
+  methods: {
+    toggleImageEnlarge(screenshot) {
+      if (this.enlargedImage === screenshot && this.isImageEnlarged) {
+        // 如果点击的是已放大的图片，则关闭放大视图
+        this.isImageEnlarged = false
+        this.enlargedImage = null
+      } else {
+        // 否则放大新点击的图片
+        this.enlargedImage = screenshot
+        this.isImageEnlarged = true
+      }
     }
   }
 }
@@ -272,6 +305,7 @@ export default {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
   object-fit: contain; /* 确保图片保持比例 */
+  cursor: pointer;
 }
 
 .plugin-screenshot:hover {
@@ -290,6 +324,30 @@ export default {
   color: #9ca3af;
   text-align: center;
   font-style: italic;
+}
+
+/* 图片放大样式 */
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.enlarged-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  cursor: default;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* 响应式调整 */
