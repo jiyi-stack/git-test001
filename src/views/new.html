@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>插件管理系统</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        .table-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+            padding: 16px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #eef1f5;
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: #f8fafc;
+        }
+
+        .plugin-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .plugin-usage {
+            color: #5a6c7d;
+            line-height: 1.5;
+        }
+
+        .plugin-image {
+            max-height: 100px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .plugin-image:hover {
+            transform: scale(1.03);
+        }
+
+        .image-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .image-modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .modal-image {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-button {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close-button:hover {
+            color: #e74c3c;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th,
+            td {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="container">
+        <div class="header">
+            <h1>插件管理系统</h1>
+            <p>管理您的插件，轻松查看信息与预览图片</p>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>操作名称</th>
+                        <th>使用方法</th>
+                        <th>图片预览</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="plugin in plugins" :key="plugin.id">
+                        <td class="plugin-name">{{ plugin.name }}</td>
+                        <td class="plugin-usage">{{ plugin.usage }}</td>
+                        <td>
+                            <img :src="plugin.image" :alt="plugin.name" class="plugin-image"
+                                @click="openModal(plugin.image)">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div v-if="plugins.length === 0" class="empty-state">
+                <p>暂无插件数据</p>
+            </div>
+        </div>
+
+        <div class="image-modal" :class="{ active: modalVisible }" @click="closeModal">
+            <div class="modal-content" @click.stop>
+                <button class="close-button" @click="closeModal">&times;</button>
+                <img :src="currentImage" class="modal-image" alt="放大图片">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                plugins: [
+                    {
+                        id: 1,
+                        name: "截图",
+                        usage: "点击截图，选择区域坐标定点截图，同时还可将截图复制到剪贴板、保存到自定义的位置。",
+                        image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+                    },
+                    {
+                        id: 2,
+                        name: "代码格式化工具",
+                        usage: "在代码编辑器中按Ctrl+Shift+F自动格式化代码，支持多种编程语言。",
+                        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+                    },
+                    {
+                        id: 3,
+                        name: "数据可视化组件",
+                        usage: "引入组件后，传入数据配置即可生成图表，支持柱状图、折线图等多种类型。",
+                        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+                    },
+                    {
+                        id: 4,
+                        name: "API调试助手",
+                        usage: "输入API地址和参数，选择请求方法，点击发送即可查看响应结果和状态码。",
+                        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+                    },
+                    {
+                        id: 5,
+                        name: "文件上传组件",
+                        usage: "拖拽文件到指定区域或点击选择文件，支持多文件上传和进度显示。",
+                        image: "https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+                    }
+                ],
+                modalVisible: false,
+                currentImage: ""
+            },
+            methods: {
+                openModal(imageUrl) {
+                    this.currentImage = imageUrl;
+                    this.modalVisible = true;
+                },
+                closeModal() {
+                    this.modalVisible = false;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

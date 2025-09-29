@@ -6,6 +6,9 @@
     <!-- 脚本自动化页面 -->
     <AutomationSection v-if="currentPage === 'automation'" />
 
+    <!-- 展示插件页面 -->
+    <PluginTable v-if="currentPage === 'plugins'" />
+
     <!-- AI模块页面 -->
     <AIModulesSection v-if="currentPage === 'ai-modules'" />
 
@@ -26,6 +29,7 @@
 <script>
 import WelcomeSection from './sections/WelcomeSection.vue'
 import AutomationSection from './sections/AutomationSection.vue'
+import PluginTable from './PluginTable.vue'
 import AIModulesSection from './sections/AIModulesSection.vue'
 import RulesSection from './sections/RulesSection.vue'
 import AttendanceSection from './sections/AttendanceSection.vue'
@@ -43,6 +47,7 @@ export default {
   components: {
     WelcomeSection,
     AutomationSection,
+    PluginTable,
     AIModulesSection,
     RulesSection,
     AttendanceSection,
