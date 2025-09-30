@@ -336,7 +336,7 @@ export default {
   width: 10px;
   height: 10px;
   background-color: #2563eb;
-  outline: 4px solid #b7ceff;
+  outline: 5px solid #b7ceff;
   animation: bulletPulse 2s infinite ease-in-out;
   z-index: 10;
 }

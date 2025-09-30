@@ -24,7 +24,7 @@ export default {}
 }
 
 .tab-header h2 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   color: #1f2937;
 }

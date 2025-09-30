@@ -117,7 +117,7 @@ export default {
         {
           id: 5,
           name: '✨ 桌面显示/隐藏',
-          usage: ' 选择隐藏后，不管桌面打开多少个页面，都会直接显示桌面类似于',
+          usage: ' 选择隐藏后，不管桌面打开多少个页面，都会直接显示桌面',
           screenshots: [
             require('@/assets/capture2.png'),
             require('@/assets/capture4.png')
