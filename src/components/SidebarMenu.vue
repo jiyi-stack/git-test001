@@ -30,7 +30,7 @@
           @click="handleItemClick('plugins')"
         >
           <i class="fas fa-puzzle-piece"></i>
-          <span>展示插件</span>
+          <span>插件支持</span>
         </li>
 
         <li

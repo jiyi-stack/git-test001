@@ -62,7 +62,7 @@ export default {
 .contentWrapper {
   margin-left: 256px;
   flex: 1;
-  padding: 32px;
+  padding: 26px;
 }
 
 /* 响应式设计 */

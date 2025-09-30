@@ -54,6 +54,6 @@ body {
 /* 主布局 */
 .MainContainer {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
 }
 </style>

@@ -1,11 +1,11 @@
 <template>
   <div class="tab-header">
     <h2><slot>脚本录制</slot></h2>
-    <div class="tab-actions">
+    <!-- <div class="tab-actions">
       <button class="btn btn-primary">
         <i class="fas fa-play"></i> 操作步骤
       </button>
-    </div>
+    </div> -->
   </div>
 </template>
 
