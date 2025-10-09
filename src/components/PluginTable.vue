@@ -95,8 +95,8 @@ export default {
           name: '✨ 键盘输入',
           usage: ' 增加文本输入的步骤，支持输入文本、选择文本、复制文本等操作',
           screenshots: [
-            require('@/assets/capture4.png'),
-            require('@/assets/capture4.png')
+            require('@/assets/img.png'),
+            require('@/assets/img.png')
           ]
         },
         {
