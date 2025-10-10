@@ -1,7 +1,7 @@
 <template>
   <section class="ai-modules-section">
     <div class="page-header">
-      <h1 class="page-title">AI 模块</h1>
+      <h1 class="page-title">AI 大模型对话</h1>
       <p class="page-description">
         如何使用AI智能对话，将从三个对接系统分别介绍使用方法：
       </p>

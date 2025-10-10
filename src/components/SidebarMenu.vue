@@ -40,7 +40,7 @@
           @click="handleItemClick('ai-modules')"
         >
           <i class="fas fa-robot"></i>
-          <span>AI 模块</span>
+          <span>AI 大模型</span>
           <i
             class="fas fa-chevron-down chevron"
             :class="{ rotate: isSubmenuOpen('ai-modules') }"
@@ -68,11 +68,27 @@
             </li>
             <li
               class="submenu-item"
+              :class="{ active: currentPage === 'operation' }"
+              data-page="operation"
+              @click.stop="handleSubItemClick('operation')"
+            >
+              智能运维平台
+            </li>
+            <li
+              class="submenu-item"
               :class="{ active: currentPage === 'sunshine' }"
               data-page="sunshine"
               @click.stop="handleSubItemClick('sunshine')"
             >
               阳光灵思图
+            </li>
+            <li
+              class="submenu-item"
+              :class="{ active: currentPage === 'pdftool' }"
+              data-page="pdftool"
+              @click.stop="handleSubItemClick('pdftool')"
+            >
+              PDF工具
             </li>
           </ul>
         </li>

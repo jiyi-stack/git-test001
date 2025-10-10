@@ -18,6 +18,12 @@
     <!-- 外包考勤系统页面 -->
     <AttendanceSection v-if="currentPage === 'attendance'" />
 
+    <!-- PDF工具页面 -->
+    <PdfSection v-if="currentPage === 'pdftool'" />
+
+    <!-- 智能运维平台页面 -->
+    <OperationSection v-if="currentPage === 'operation'" />
+
     <!-- 阳光灵思图页面 -->
     <SunshineSection v-if="currentPage === 'sunshine'" />
 
@@ -35,6 +41,8 @@ import RulesSection from './sections/RulesSection.vue'
 import AttendanceSection from './sections/AttendanceSection.vue'
 import SunshineSection from './sections/SunshineSection.vue'
 import UpdatesSection from './sections/UpdatesSection.vue'
+import PdfSection from './sections/PdfSection.vue'
+import OperationSection from './sections/OperationSection.vue'
 
 export default {
   name: 'MainContent',
@@ -52,7 +60,9 @@ export default {
     RulesSection,
     AttendanceSection,
     SunshineSection,
-    UpdatesSection
+    UpdatesSection,
+    PdfSection,
+    OperationSection
   }
 }
 </script>
