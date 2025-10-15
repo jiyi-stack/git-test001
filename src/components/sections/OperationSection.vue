@@ -262,8 +262,8 @@ export default {
 }
 
 .sidebar-item.active {
-  background-color: #eff6ff;
-  color: #2563eb;
+  background-color: #f3f4f6;
+  color: #333;
   font-weight: 500;
 }
 

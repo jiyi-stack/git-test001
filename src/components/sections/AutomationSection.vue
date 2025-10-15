@@ -14,6 +14,13 @@
           <ul>
             <li
               class="sidebar-item active"
+              data-tab="layout"
+              @click="switchTab('layout')"
+            >
+              布局介绍
+            </li>
+            <li
+              class="sidebar-item"
               data-tab="recording"
               @click="switchTab('recording')"
             >
@@ -46,6 +53,16 @@
 
       <div class="main-content">
         <!-- <FontDecration>操作步骤如下：</FontDecration> -->
+
+        <!-- 布局介绍 -->
+        <div class="recordSteps autoLayout">
+          <h3>✅ 布局介绍</h3>
+          1. 打开应用后，使用企业微信扫码登录，登录成功后即可进入首页
+          <div class="imgStyle">
+            <img src="@/assets/capture2.png" alt="" />
+          </div>
+          <p></p>
+        </div>
 
         <!-- 首页步骤 -->
         <div class="recordSteps autoIndex">
@@ -218,7 +235,7 @@ export default {
   name: 'AutomationSection',
   data() {
     return {
-      activeTab: 'recording'
+      activeTab: 'layout'
     }
   },
   mounted() {
@@ -243,7 +260,8 @@ export default {
         recording: 'autoIndex',
         management: 'autoRecord',
         variables: 'autoAdd',
-        plugins: 'autoEdit'
+        plugins: 'autoEdit',
+        layout: 'autoLayout'
       }
       const targetSection = document.querySelector(`.${sectionMap[tab]}`)
       if (targetSection) {
@@ -382,8 +400,8 @@ export default {
 }
 
 .sidebar-item.active {
-  background-color: #eff6ff;
-  color: #2563eb;
+  background-color: #f3f4f6;
+  color: #333;
   font-weight: 500;
 }
 

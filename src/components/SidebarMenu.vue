@@ -148,10 +148,18 @@ export default {
         .forEach((i) => i.classList.remove('active'))
 
       // 找到父级菜单项并添加active类
-      const parentMenuItem = document.querySelector('[data-page="ai-modules"]')
-      if (parentMenuItem) {
-        parentMenuItem.classList.add('active')
-      }
+      // const parentMenuItem = document.querySelector('[data-page="ai-modules"]')
+      // if (parentMenuItem) {
+      //   parentMenuItem.classList.add('active')
+      // }
+
+      // 移除所有子菜单项的active类
+      document
+        .querySelectorAll('.submenu-item')
+        .forEach((i) => i.classList.remove('active'))
+
+      // 为当前点击的子菜单项添加active类
+      event.currentTarget.classList.add('active')
 
       // 处理页面切换
       this.$emit('page-change', page)
@@ -238,7 +246,7 @@ export default {
 
 /* 子菜单 */
 .submenu {
-  background-color: #f3f4f6;
+  background-color: #ffffff;
   display: none;
 }
 
@@ -253,7 +261,7 @@ export default {
 }
 
 .submenu-item:hover {
-  background-color: #e5e7eb;
+  background-color: #f3f4f6;
 }
 
 .submenu-item.active {

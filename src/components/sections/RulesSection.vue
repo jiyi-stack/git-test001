@@ -64,24 +64,19 @@
           <ul>
             <li>
               1. 进入晓阳AI对话模块，点击卡片，选择“规则代码生成”。
-              <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
+              <div>
+                <img
+                  style="width: 1000px"
+                  src="@/assets/ruleModoles.png"
+                  alt=""
+                />
               </div>
             </li>
             <li>
-              2.
-              在已有模板中，用户可以通过输入特定的规则描述，自动生成相应的规则代码。
+              2.在已有模板中，用户可以通过输入特定的规则描述，自动生成相应的规则代码。
               <br />
-              <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
-              </div>
             </li>
-            <li>
-              3. 这是生成的代码，可以直接插入使用
-              <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
-              </div>
-            </li>
+            <li>3. 这是生成的代码，可以直接插入使用</li>
           </ul>
           <p></p>
         </div>
@@ -283,8 +278,8 @@ export default {
 }
 
 .sidebar-item.active {
-  background-color: #eff6ff;
-  color: #2563eb;
+  background-color: #f3f4f6;
+  color: #333;
   font-weight: 500;
 }
 

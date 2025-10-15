@@ -2,7 +2,9 @@
   <section class="rule-section">
     <div class="page-header">
       <h1 class="page-title">PDF工具页面</h1>
-      <p class="page-description">支持pdf对ppt、word、图片等处理</p>
+      <p class="page-description">
+        支持PDF拆分、合并、（word、图片、ppt）转PDF等功能
+      </p>
     </div>
     <div class="rule-content">
       <div class="rule-sidebar">
@@ -14,21 +16,14 @@
               data-tab="recording"
               @click="switchTab('recording')"
             >
-              代码生成
+              合并/拆分PDF
             </li>
             <li
               class="sidebar-item"
               data-tab="management"
               @click="switchTab('management')"
             >
-              规则检索
-            </li>
-            <li
-              class="sidebar-item"
-              data-tab="variables"
-              @click="switchTab('variables')"
-            >
-              工具方法检索
+              文件转PDF
             </li>
           </ul>
         </div>
@@ -39,61 +34,33 @@
 
         <!-- 首页步骤 -->
         <div class="recordSteps ruleIndex">
-          <h3>✅ 规则代码生成</h3>
+          <h3>✅ 如何合并/拆分PDF</h3>
           <ul>
             <li>
-              1. 进入晓阳AI对话模块，点击卡片，选择“规则代码生成”。
-              <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
+              1. 进入更多页面，内含四个模块，点击其中的PDF工具
+              <div>
+                <img
+                  src="@/assets/AIpdf.png"
+                  alt=""
+                  style="width: 1000px; padding-top: 12px"
+                />
               </div>
             </li>
             <li>
-              2.
-              在已有模板中，用户可以通过输入特定的规则描述，自动生成相应的规则代码。
+              2.此时出现一个弹框，点击左侧的导航栏拆分或者合并，根据①到⑤的编号依次进行操作即可
               <br />
-              <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
-              </div>
-            </li>
-            <li>
-              3. 这是生成的代码，可以直接插入使用
-              <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
-              </div>
             </li>
           </ul>
-          <p></p>
         </div>
 
         <!-- 录制脚本步骤 -->
         <div class="recordSteps autoRecord">
-          <h3>✅ 如何规则检索</h3>
+          <h3>✅ 多种类型文件转PDF</h3>
           <ul>
             <li>
-              1.
-              在对话框中输入规则描述，点击“规则检索”按钮，系统会根据描述进行规则检索。
+              操作步骤同上,左侧的导航栏菜单,可以实现word、图片、ppt转成PDF文件,轻量便捷
               <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
-              </div>
-            </li>
-            <li>
-              2. 用户可以搜索已有的规则，快速找到所需的信息。
-              <br />
-              <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- 添加脚本步骤 -->
-        <div class="recordSteps autoAdd">
-          <h3>✅ 规则工具方法检索</h3>
-          <ul>
-            <li>
-              1. 用户可以查找和使用各种规则工具方法，提高工作效率。
-              <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
+                <!-- <img src="@/assets/img.png" alt="" /> -->
               </div>
             </li>
           </ul>
@@ -263,13 +230,13 @@ export default {
 }
 
 .sidebar-item.active {
-  background-color: #eff6ff;
-  color: #2563eb;
+  background-color: #f3f4f6;
+  color: #333;
   font-weight: 500;
 }
 
 .main-content {
-  padding: 30px 0;
+  padding: 30px 0 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -285,7 +252,7 @@ export default {
 }
 
 .recordSteps {
-  padding: 16px;
+  padding: 4px 16px 16px 16px;
   /* 隐藏滚动条但保持滚动功能 */
   scrollbar-width: none;
   -ms-overflow-style: none;
