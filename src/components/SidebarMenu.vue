@@ -30,7 +30,7 @@
           @click="handleItemClick('plugins')"
         >
           <i class="fas fa-puzzle-piece"></i>
-          <span>插件支持</span>
+          <span>脚本插件</span>
         </li>
 
         <li
@@ -74,23 +74,27 @@
             >
               智能运维平台
             </li>
-            <li
-              class="submenu-item"
-              :class="{ active: currentPage === 'sunshine' }"
-              data-page="sunshine"
-              @click.stop="handleSubItemClick('sunshine')"
-            >
-              阳光灵思图
-            </li>
-            <li
-              class="submenu-item"
-              :class="{ active: currentPage === 'pdftool' }"
-              data-page="pdftool"
-              @click.stop="handleSubItemClick('pdftool')"
-            >
-              PDF工具
-            </li>
           </ul>
+        </li>
+
+        <li
+          class="menu-item"
+          :class="{ active: currentPage === 'sunshine' }"
+          data-page="sunshine"
+          @click="handleItemClick('sunshine')"
+        >
+          <i class="fas fa-sun"></i>
+          <span>阳光灵思图</span>
+        </li>
+
+        <li
+          class="menu-item"
+          :class="{ active: currentPage === 'pdftool' }"
+          data-page="pdftool"
+          @click="handleItemClick('pdftool')"
+        >
+          <i class="fas fa-file-pdf"></i>
+          <span>PDF工具</span>
         </li>
       </ul>
     </nav>
@@ -146,12 +150,6 @@ export default {
       document
         .querySelectorAll('.menu-item')
         .forEach((i) => i.classList.remove('active'))
-
-      // 找到父级菜单项并添加active类
-      // const parentMenuItem = document.querySelector('[data-page="ai-modules"]')
-      // if (parentMenuItem) {
-      //   parentMenuItem.classList.add('active')
-      // }
 
       // 移除所有子菜单项的active类
       document

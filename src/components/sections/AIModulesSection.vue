@@ -12,8 +12,8 @@
         <li>规则系统</li>
         <li>外包考勤系统</li>
         <li>智能运维平台</li>
-        <li>阳光灵思图</li>
-        <li>PDF工具</li>
+        <!-- <li>阳光灵思图</li> -->
+        <!-- <li>PDF工具</li> -->
       </ul>
     </div>
   </section>

@@ -53,15 +53,21 @@
 
       <div class="main-content">
         <!-- <FontDecration>操作步骤如下：</FontDecration> -->
+        <!-- <div style="width: 100%; height: 30%">
+          <img
+            style="width: 60%; height: 100%; object-fit: cover"
+            src="@/assets/capture.png"
+            alt=""
+          />
+        </div> -->
 
         <!-- 布局介绍 -->
         <div class="recordSteps autoLayout">
           <h3>✅ 布局介绍</h3>
           1. 打开应用后，使用企业微信扫码登录，登录成功后即可进入首页
           <div class="imgStyle">
-            <img src="@/assets/capture2.png" alt="" />
+            <!-- <img src="@/assets/capture2.png" alt="" /> -->
           </div>
-          <p></p>
         </div>
 
         <!-- 首页步骤 -->
@@ -70,8 +76,12 @@
           <ul>
             <li>
               1. 打开应用后，使用企业微信扫码登录，登录成功后即可进入首页
-              <div class="imgStyle">
-                <img src="@/assets/capture2.png" alt="" />
+              <div>
+                <img
+                  style="height: 40vh; margin: 16px 6px"
+                  src="@/assets/capture5.png"
+                  alt=""
+                />
               </div>
             </li>
             <li>
@@ -85,11 +95,10 @@
             <li>
               3. 点击标题，可以跳转到脚本详情页面
               <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
+                <!-- <img src="@/assets/img.png" alt="" /> -->
               </div>
             </li>
           </ul>
-          <p></p>
         </div>
 
         <!-- 录制脚本步骤 -->
@@ -133,7 +142,6 @@
               </div>
             </li>
           </ul>
-          <p></p>
         </div>
 
         <!-- 添加脚本步骤 -->
@@ -155,7 +163,6 @@
               </div>
             </li>
           </ul>
-          <p></p>
         </div>
 
         <!-- 编辑脚本步骤 -->
@@ -221,7 +228,6 @@
               </div>
             </li>
           </ul>
-          <p></p>
         </div>
       </div>
     </div>
