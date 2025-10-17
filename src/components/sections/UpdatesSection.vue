@@ -1,9 +1,9 @@
 <template>
-  <section class="updates-section">
-    <div class="section-header">
-      <h2 class="page-title">最近更新功能</h2>
+  <section class="updatesSection">
+    <div class="sectionHeader">
+      <h2 class="pageTitle">最近更新功能</h2>
       <button
-        class="check-update-btn"
+        class="checkUpdateBtn"
         @click="checkForUpdates"
         :class="{ loading: isLoading }"
       >
@@ -11,60 +11,60 @@
         检查版本
       </button>
     </div>
-    <div class="updates-card">
-      <div class="update-list">
-        <div class="update-item">
-          <div class="update-bullet" id="item-1"></div>
-          <div class="update-content">
-            <h3 class="update-title">外包考勤系统新增考勤信息下载表格功能</h3>
-            <p class="update-description">
+    <div class="updatesCard">
+      <div class="updateList">
+        <div class="updateItem">
+          <div class="updateBullet" id="item-1"></div>
+          <div class="updateContent">
+            <h3 class="updateTitle">外包考勤系统新增考勤信息下载表格功能</h3>
+            <p class="updateDescription">
               下载考勤信息，包含每日打卡数据，每月工时汇总/加班/调休工时等信息
             </p>
-            <p class="update-date">2024-01-15</p>
+            <p class="updateDate">2024-01-15</p>
           </div>
         </div>
 
-        <div class="update-item">
-          <div class="update-bullet" id="item-2"></div>
-          <div class="update-content">
-            <h3 class="update-title">脚本录制功能升级</h3>
-            <p class="update-description">
+        <div class="updateItem">
+          <div class="updateBullet" id="item-2"></div>
+          <div class="updateContent">
+            <h3 class="updateTitle">脚本录制功能升级</h3>
+            <p class="updateDescription">
               新增智能操作识别，提高识别速度，减少在录制卡顿的现象
             </p>
-            <p class="update-date">2024-01-10</p>
+            <p class="updateDate">2024-01-10</p>
           </div>
         </div>
 
-        <div class="update-item">
-          <div class="update-bullet" id="item-3"></div>
-          <div class="update-content">
-            <h3 class="update-title">新增脚本插件</h3>
-            <p class="update-description">
+        <div class="updateItem">
+          <div class="updateBullet" id="item-3"></div>
+          <div class="updateContent">
+            <h3 class="updateTitle">新增脚本插件</h3>
+            <p class="updateDescription">
               新增脚本插件Pdf处理工具插件，支持合并，压缩pdf文件
             </p>
-            <p class="update-date">2024-01-05</p>
+            <p class="updateDate">2024-01-05</p>
           </div>
         </div>
 
-        <div class="update-item">
-          <div class="update-bullet" id="item-4"></div>
-          <div class="update-content">
-            <h3 class="update-title">脚本录制跳转交互优化</h3>
-            <p class="update-description">
+        <div class="updateItem">
+          <div class="updateBullet" id="item-4"></div>
+          <div class="updateContent">
+            <h3 class="updateTitle">脚本录制跳转交互优化</h3>
+            <p class="updateDescription">
               跳转逻辑发生变化，点击录制后直接开启全屏记录
             </p>
-            <p class="update-date">2024-01-02</p>
+            <p class="updateDate">2024-01-02</p>
           </div>
         </div>
 
-        <div class="update-item">
-          <div class="update-bullet" id="item-5"></div>
-          <div class="update-content">
-            <h3 class="update-title">脚本录制功能升级</h3>
-            <p class="update-description">
-              新增智能变量识别，提高时别速度，减少在录制卡顿的现象
+        <div class="updateItem">
+          <div class="updateBullet" id="item-5"></div>
+          <div class="updateContent">
+            <h3 class="updateTitle">脚本录制功能升级</h3>
+            <p class="updateDescription">
+              新增智能变量识别，提高识别速度，减少在录制卡顿的现象
             </p>
-            <p class="update-date">2024-01-01</p>
+            <p class="updateDate">2024-01-01</p>
           </div>
         </div>
       </div>
@@ -289,7 +289,7 @@ export default {
 
 <style scoped>
 /* 更新列表 */
-.updates-section {
+.updatesSection {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -298,7 +298,7 @@ export default {
   margin-bottom: 8px;
 }
 
-.updates-card {
+.updatesCard {
   background-color: #fff;
   border-radius: 8px;
   padding: 32px;
@@ -312,18 +312,18 @@ export default {
   height: 200px;
 }
 
-.update-list {
+.updateList {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.update-item {
+.updateItem {
   display: flex;
   position: relative;
 }
 
-.update-bullet {
+.updateBullet {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -332,7 +332,7 @@ export default {
   flex-shrink: 0;
 }
 
-.update-item:first-child .update-bullet {
+.update-item:first-child .updateBullet {
   width: 10px;
   height: 10px;
   background-color: #2563eb;
@@ -359,7 +359,7 @@ export default {
 }
 
 /* 时间轴连接线 */
-.update-item:not(:last-child)::after {
+.updateItem:not(:last-child)::after {
   content: '';
   position: absolute;
   left: 3px;
@@ -369,39 +369,39 @@ export default {
   background-color: #e5e7eb;
 }
 
-.update-content {
+.updateContent {
   margin-left: 12px;
 }
 
-.update-title {
+.updateTitle {
   font-weight: 600;
   margin-bottom: 8px;
   color: #1f2937;
 }
 
-.update-description {
+.updateDescription {
   color: #4b5563;
   margin-bottom: 8px;
 }
 
-.update-date {
+.updateDate {
   color: #9ca3af;
   font-size: 14px;
 }
 
 /* 章节头部样式 */
-.section-header {
+.sectionHeader {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 16px;
 }
 
-.page-title {
+.pageTitle {
   margin-bottom: 0;
 }
 
-.check-update-btn {
+.checkUpdateBtn {
   background-color: white;
   color: #4b5563;
   border: 1px solid #d1d5db;
@@ -418,23 +418,23 @@ export default {
   transition: color 0.3s;
 }
 
-.check-update-btn:hover {
+.checkUpdateBtn:hover {
   background-color: #2563eb;
   color: white;
   border-color: #2563eb;
   transform: translateY(-1px);
 }
 
-.check-update-btn:active {
+.checkUpdateBtn:active {
   background-color: #1d4ed8;
   transform: translateY(0);
 }
 
-.check-update-btn i {
+.checkUpdateBtn i {
   transition: transform 0.3s;
 }
 
-.check-update-btn.loading i {
+.checkUpdateBtn.loading i {
   animation: spin 1s linear infinite;
 }
 
