@@ -52,22 +52,11 @@
       </div>
 
       <div class="main-content">
-        <!-- <FontDecration>操作步骤如下：</FontDecration> -->
-        <!-- <div style="width: 100%; height: 30%">
-          <img
-            style="width: 60%; height: 100%; object-fit: cover"
-            src="@/assets/capture.png"
-            alt=""
-          />
-        </div> -->
-
-        <!-- 布局介绍 -->
         <div class="recordSteps autoLayout">
-          <h3>✅ 布局介绍</h3>
-          1. 打开应用后，使用企业微信扫码登录，登录成功后即可进入首页
-          <div class="imgStyle">
-            <!-- <img src="@/assets/capture2.png" alt="" /> -->
-          </div>
+          <h3>✅晓阳AI平台介绍</h3>
+          <br />
+          本平台是一款集成了脚本自动化与AI大模型的综合工具，
+          减少重复性劳动，帮助用户提高工作效率；对接内部系统，利用AI大模型技术处理综合性问题，实现业务流程的智能化升级。
         </div>
 
         <!-- 首页步骤 -->
@@ -78,24 +67,39 @@
               1. 打开应用后，使用企业微信扫码登录，登录成功后即可进入首页
               <div>
                 <img
-                  style="height: 40vh; margin: 16px 6px"
-                  src="@/assets/capture5.png"
+                  style="max-height: 50vh; margin: 16px 6px"
+                  src="@/assets/login-pic.png"
                   alt=""
                 />
               </div>
             </li>
             <li>
               2.
-              登录成功后跳转首页，首页是首显示本地已有的脚本，可以根据名字模糊匹配进行搜索🔍
+              登录成功后跳转首页，会显示本地已有的脚本，可以根据名字模糊匹配进行搜索🔍
               <br />
-              <div class="imgStyle">
-                <img src="@/assets/capture1.png" alt="" />
+              &nbsp;&nbsp;&nbsp;运行脚本即可执行自动化任务，脚本卡片右上角有当前运行状态，例如：<span
+                style="color: #5366a6; font-weight: 700"
+                >运行中、成功、失败</span
+              >
+              等
+              <div>
+                <img
+                  style="max-height: 50vh; margin: 16px 6px"
+                  src="@/assets/ai-index.png"
+                  alt=""
+                />
               </div>
             </li>
             <li>
-              3. 点击标题，可以跳转到脚本详情页面
-              <div class="imgStyle">
-                <!-- <img src="@/assets/img.png" alt="" /> -->
+              3. 点击标题，可以跳转到脚本详情页面;<br />
+              &nbsp;&nbsp;&nbsp;
+              在这里可以单独测试、编辑和删除具体某一条步骤，也可以更改脚本名称
+              <div>
+                <img
+                  style="max-height: 50vh; margin: 16px 6px"
+                  src="@/assets/auto-detaile.png"
+                  alt=""
+                />
               </div>
             </li>
           </ul>
@@ -106,8 +110,9 @@
           <h3>✅ 如何录制脚本</h3>
           <ul>
             <li>
-              1.
-              点击下方第二个菜单图标，进入新建页面，支持两种方式：录制脚本和手动添加脚本
+              1. 点击下方第二个菜单图标，进入新建页面，支持两种方式：
+              <span><img src="@/assets/record.svg" alt="" /> 录制脚本</span
+              >和手动<span><img src="@/assets/add.svg" alt="" /> 添加脚本</span>
             </li>
             <li>
               2.
@@ -432,6 +437,8 @@ export default {
   /* 隐藏滚动条但保持滚动功能 */
   scrollbar-width: none;
   -ms-overflow-style: none;
+  font-size: 16px;
+  line-height: 28px;
 }
 
 .tip-box {
@@ -460,13 +467,18 @@ export default {
   list-style: none;
 }
 
+.recordSteps li img {
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
 .imgStyle {
   margin: 16px 6px;
   width: 80px;
 }
 
-.imgStyle img {
+/* .imgStyle img {
   width: 260%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
+} */
 </style>

@@ -51,7 +51,7 @@
       </div>
 
       <div class="main-content">
-        <!-- <FontDecration>操作步骤如下：</FontDecration> -->
+        <FontDecration>操作步骤如下：</FontDecration>
 
         <!-- 首页步骤 -->
         <div class="recordSteps ruleIndex">
@@ -92,12 +92,12 @@
 </template>
 
 <script>
-// import FontDecration from '@/components/FontDecration.vue'
+import FontDecration from '@/components/FontDecration.vue'
 
 export default {
   name: 'RulesSection',
   components: {
-    // FontDecration
+    FontDecration
   },
   mounted() {
     this.setupScrollSpy()

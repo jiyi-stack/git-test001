@@ -6,25 +6,6 @@
         基于规则的智能决策引擎，支持复杂业务逻辑的自动化处理
       </p>
     </div>
-    <!--
-    <div class="intro-features">
-      <div class="feature-item">
-        <i class="fas fa-check-circle"></i>
-        <span>支持各种规则执行流，提供可视化编辑</span>
-      </div>
-      <div class="feature-item">
-        <i class="fas fa-check-circle"></i>
-        <span>AI在线代码生成、测试</span>
-      </div>
-      <div class="feature-item">
-        <i class="fas fa-check-circle"></i>
-        <span>多维度规则执行统计报表</span>
-      </div>
-      <div class="feature-item">
-        <i class="fas fa-check-circle"></i>
-        <span>规则版本回溯，提供各维度规则图谱</span>
-      </div>
-    </div> -->
     <div class="rule-content">
       <div class="rule-sidebar">
         <div class="sidebar-menu">

@@ -26,7 +26,7 @@ export default {
   methods: {
     handlePageChange(page) {
       this.currentPage = page
-      // 这里可以添加页面切换逻辑，例如路由导航
+      // 这里添加页面路由导航
     }
   }
 }
