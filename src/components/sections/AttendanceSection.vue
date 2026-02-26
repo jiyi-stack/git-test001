@@ -13,24 +13,24 @@
           <ul>
             <li
               class="sidebar-item active"
-              data-tab="recording"
-              @click="switchTab('recording')"
+              data-tab="introduction "
+              @click="switchTab('introduction')"
             >
               考勤系统功能介绍
             </li>
             <li
               class="sidebar-item"
-              data-tab="management"
-              @click="switchTab('management')"
+              data-tab="summary"
+              @click="switchTab('summary')"
             >
-              考勤信息汇总
+              考勤详情/汇总
             </li>
             <li
               class="sidebar-item"
-              data-tab="errorhandle"
-              @click="switchTab('errorhandle')"
+              data-tab="handleExceptions"
+              @click="switchTab('handleExceptions')"
             >
-              考勤异常信息处理
+              考勤异常处理
             </li>
             <li
               class="sidebar-item"
@@ -44,7 +44,7 @@
               data-tab="leadercheck"
               @click="switchTab('leadercheck')"
             >
-              组长考勤审批
+              组长审批考勤
             </li>
           </ul>
         </div>
@@ -53,13 +53,64 @@
       <div class="main-content">
         <FontDecration>操作步骤如下：</FontDecration>
 
-        <!-- 首页步骤 -->
-        <div class="recordSteps ruleIndex">
-          <h3>✅ 如何合并/拆分PDF</h3>
+        <!-- 考勤系统介绍 -->
+        <div class="recordSteps introduction">
+          <h3>✅ 考勤系统功能介绍</h3>
           <ul>
             <li>
-              1. 进入更多页面，内含四个模块，点击其中的PDF工具
+              1.
+              首先，查看考勤系统的功能介绍页面，了解系统的基本功能和操作流程。
               <div>
+                <img
+                  src="@/assets/down2.png"
+                  alt=""
+                  style="width: 700px; padding-top: 12px"
+                />
+              </div>
+            </li>
+            <li>
+              2.如图所示，我们的考勤系统包含组长端和组员端。组长负责审批组员的考勤信息,并可以设置考勤规则。组员每月查询考勤信息，处理异常数据，查询调休信息，下载考勤表的功能，下面我将依次为您介绍该系统的使用方法
+              <br />
+            </li>
+          </ul>
+        </div>
+
+        <!-- 考勤信息汇总 -->
+        <div class="recordSteps summary">
+          <h3>✅ 考勤详情与汇总信息</h3>
+          <ul>
+            <li>
+              1.在输入框中选择模板，查询当月考勤详情或汇总。
+              <div>
+                <!-- <img src="@/assets/img.png" alt="" /> -->
+                <img
+                  src="@/assets/attendenceAll.png"
+                  alt=""
+                  style="width: 650px; padding-top: 12px"
+                />
+              </div>
+            </li>
+            <li>
+              2.晓阳ai会根据打卡时间，异常时长，调休时长，正常时长，加班时长，请假时长，缺勤时长等，生成对应的考勤详情或汇总表格。
+              <div class="imgStyle">
+                <img
+                  src="@/assets/attendenceAll.png"
+                  alt=""
+                  style="width: 1000px; padding-top: 12px"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 考勤异常信息处理 -->
+        <div class="recordSteps handleExceptions">
+          <h3>✅ 考勤异常信息处理</h3>
+          <ul>
+            <li>
+              1.在输入框中选择模板，查询当月考勤汇总。
+              <div>
+                <!-- <img src="@/assets/img.png" alt="" /> -->
                 <img
                   src="@/assets/AIpdf.png"
                   alt=""
@@ -68,20 +119,47 @@
               </div>
             </li>
             <li>
-              2.此时出现一个弹框，点击左侧的导航栏拆分或者合并，根据①到⑤的编号依次进行操作即可
-              <br />
+              2.等待晓阳ai提供异常数据，查看表格，提交自己的异常原因与时长，批量提交，异常数据处理完成。
+              <div>
+                <img
+                  src="@/assets/AIpdf.png"
+                  alt=""
+                  style="width: 1000px; padding-top: 12px"
+                />
+              </div>
             </li>
           </ul>
         </div>
 
-        <!-- 录制脚本步骤 -->
-        <div class="recordSteps autoRecord">
-          <h3>✅ 多种类型文件转PDF</h3>
+        <!-- 调休信息查询 -->
+        <div class="recordSteps datecheck">
+          <h3>✅ 调休信息查询</h3>
           <ul>
             <li>
-              操作步骤同上,左侧的导航栏菜单,可以实现word、图片、ppt转成PDF文件,轻量便捷
+              在输入框中选择模板，查询当月调休信息。晓阳ai会提供调休信息表格。
               <div class="imgStyle">
-                <!-- <img src="@/assets/img.png" alt="" /> -->
+                <img
+                  src="@/assets/AIpdf.png"
+                  alt=""
+                  style="width: 1000px; padding-top: 12px"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 组长审批考勤  -->
+        <div class="recordSteps leadercheck">
+          <h3>✅ 组长审批考勤</h3>
+          <ul>
+            <li>
+              组长可以后台查看组员的所有考勤信息，对提交的考勤异常信息进行审批。审批状态分为“已审批”和“未审批”两种状态
+              <div class="imgStyle">
+                <img
+                  src="@/assets/AIpdf.png"
+                  alt=""
+                  style="width: 1000px; padding-top: 12px"
+                />
               </div>
             </li>
           </ul>
@@ -95,7 +173,7 @@
 import FontDecration from '@/components/FontDecration.vue'
 
 export default {
-  name: 'RulesSection',
+  name: 'AttendanceSection',
   components: {
     FontDecration
   },
@@ -118,10 +196,11 @@ export default {
 
       // 滚动到对应区域
       const sectionMap = {
-        recording: 'ruleIndex',
-        management: 'autoRecord',
-        variables: 'autoAdd',
-        plugins: 'autoEdit'
+        introduction: 'introduction',
+        summary: 'summary',
+        handleExceptions: 'handleExceptions',
+        datecheck: 'datecheck',
+        leadercheck: 'leadercheck'
       }
       const targetSection = document.querySelector(`.${sectionMap[tab]}`)
       if (targetSection) {
@@ -175,12 +254,12 @@ export default {
     // 根据区域类名获取对应的标签
     getTabFromSection(sectionClass) {
       const sectionToTabMap = {
-        ruleIndex: 'recording',
-        autoRecord: 'management',
-        autoAdd: 'variables',
-        autoEdit: 'plugins'
+        introduction: 'introduction',
+        summary: 'summary',
+        handleExceptions: 'handleExceptions',
+        queryTime: 'queryTime'
       }
-      return sectionToTabMap[sectionClass] || 'recording'
+      return sectionToTabMap[sectionClass] || 'introduction'
     }
   }
 }

@@ -195,20 +195,20 @@
                 <img src="@/assets/auto-edit.gif" alt="" />
               </div>
             </li>
-            <li style="color: #666">
+            <li style="color: #333">
               ·新增：与手动添加步骤类似，悬浮到已有步骤上，点击新增动画图标，可以添加新的步骤
               <br />
             </li>
             <br />
-            <li style="color: #666">
+            <li style="color: #333">
               · 修改：悬浮到已有步骤上，点击修改图标，可以修改该步骤
               <br />
             </li>
-            <li style="color: #666">
+            <li style="color: #333">
               · 删除：悬浮到已有步骤上，点击删除图标，可以删除该步骤
               <br />
             </li>
-            <li style="color: #666">
+            <li style="color: #333">
               ·
               移动：悬浮到已有步骤名称上，点击可以拖动该步骤到指定位置，其余步骤顺序顺移
               <br />
@@ -224,15 +224,15 @@
                 />
               </div>
             </li>
-            <li style="color: #666">
+            <li style="color: #333">
               · 执行：上方蓝色执行按钮表示执行该脚本全部内容
               <br />
             </li>
-            <li style="color: #666">
+            <li style="color: #333">
               · 录制：点击后，可以在弹出框中，选择覆盖或追加步骤
               <br />
             </li>
-            <li style="color: #666">
+            <li style="color: #333">
               · 保存：点击保存按钮，即可保存当前已编辑的脚本
               <br />
             </li>

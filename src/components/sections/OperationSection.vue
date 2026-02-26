@@ -1,8 +1,10 @@
 <template>
   <section class="rule-section">
     <div class="page-header">
-      <h1 class="page-title">智能运维平台页面</h1>
-      <p class="page-description">XXXXXXXXXXX</p>
+      <h1 class="page-title">智能运维平台</h1>
+      <p class="page-description">
+        智能运维平台是一个处理一些契约日常运维功能，晓阳ai可以访问查询查询保单数据、轨迹、报文等。
+      </p>
     </div>
     <div class="rule-content">
       <div class="rule-sidebar">
@@ -11,40 +13,52 @@
           <ul>
             <li
               class="sidebar-item active"
-              data-tab="recording"
-              @click="switchTab('recording')"
+              data-tab="policyInfo"
+              @click="switchTab('policyInfo')"
             >
-              代码生成
+              保单信息
             </li>
             <li
               class="sidebar-item"
-              data-tab="management"
-              @click="switchTab('management')"
+              data-tab="policyTrack"
+              @click="switchTab('policyTrack')"
             >
-              规则检索
+              保单轨迹
             </li>
             <li
               class="sidebar-item"
-              data-tab="variables"
-              @click="switchTab('variables')"
+              data-tab="policyMsg"
+              @click="switchTab('policyMsg')"
             >
-              工具方法检索
+              保单交互报文
+            </li>
+            <li
+              class="sidebar-item"
+              data-tab="policyReq"
+              @click="switchTab('policyReq')"
+            >
+              保单请求数据
+            </li>
+            <li
+              class="sidebar-item"
+              data-tab="policyHistory"
+              @click="switchTab('policyHistory')"
+            >
+              历史保单信息
             </li>
           </ul>
         </div>
       </div>
 
       <div class="main-content">
-        <!-- <FontDecration>操作步骤如下：</FontDecration> -->
-
-        <!-- 首页步骤 -->
-        <div class="recordSteps ruleIndex">
-          <h3>✅ 规则代码生成</h3>
+        <!-- 查询保单信息 -->
+        <div class="recordSteps policyInfo">
+          <h3>✅ 查询保单信息</h3>
           <ul>
             <li>
               1. 进入晓阳AI对话模块，点击卡片，选择“规则代码生成”。
-              <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
+              <div>
+                <img src="@/assets/down1.png" alt="" style="width: 80%" />
               </div>
             </li>
             <li>
@@ -64,9 +78,9 @@
           </ul>
         </div>
 
-        <!-- 录制脚本步骤 -->
-        <div class="recordSteps autoRecord">
-          <h3>✅ 如何规则检索</h3>
+        <!-- 保单轨迹 -->
+        <div class="recordSteps policyTrack">
+          <h3>✅ 查询保单轨迹</h3>
           <ul>
             <li>
               1.
@@ -85,9 +99,35 @@
           </ul>
         </div>
 
-        <!-- 添加脚本步骤 -->
-        <div class="recordSteps autoAdd">
-          <h3>✅ 规则工具方法检索</h3>
+        <!-- 保单交互报文 -->
+        <div class="recordSteps policyMsg">
+          <h3>✅ 查询保单交互报文</h3>
+          <ul>
+            <li>
+              1. 用户可以查找和使用各种规则工具方法，提高工作效率。
+              <div class="imgStyle">
+                <img src="@/assets/img.png" alt="" />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 保单请求数据 -->
+        <div class="recordSteps policyReq">
+          <h3>✅ 查询保单请求数据</h3>
+          <ul>
+            <li>
+              1. 用户可以查找和使用各种规则工具方法，提高工作效率。
+              <div class="imgStyle">
+                <img src="@/assets/img.png" alt="" />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 历史保单信息 -->
+        <div class="recordSteps policyHistory">
+          <h3>✅ 查询历史保单信息</h3>
           <ul>
             <li>
               1. 用户可以查找和使用各种规则工具方法，提高工作效率。
@@ -103,12 +143,15 @@
 </template>
 
 <script>
-// import FontDecration from '@/components/FontDecration.vue'
-
 export default {
-  name: 'RulesSection',
+  name: 'OperationSection',
   components: {
     // FontDecration
+  },
+  data() {
+    return {
+      activeTab: 'policyInfo'
+    }
   },
   mounted() {
     this.setupScrollSpy()
@@ -129,10 +172,11 @@ export default {
 
       // 滚动到对应区域
       const sectionMap = {
-        recording: 'ruleIndex',
-        management: 'autoRecord',
-        variables: 'autoAdd',
-        plugins: 'autoEdit'
+        policyInfo: 'policyInfo',
+        policyTrack: 'policyTrack',
+        policyMsg: 'policyMsg',
+        policyReq: 'policyReq',
+        policyHistory: 'policyHistory'
       }
       const targetSection = document.querySelector(`.${sectionMap[tab]}`)
       if (targetSection) {
@@ -186,12 +230,17 @@ export default {
     // 根据区域类名获取对应的标签
     getTabFromSection(sectionClass) {
       const sectionToTabMap = {
-        ruleIndex: 'recording',
-        autoRecord: 'management',
-        autoAdd: 'variables',
-        autoEdit: 'plugins'
+        policyInfo: 'policyInfo',
+        policyTrack: 'policyTrack',
+        policyMsg: 'policyMsg',
+        policyReq: 'policyReq',
+        policyHistory: 'policyHistory'
       }
-      return sectionToTabMap[sectionClass] || 'recording'
+      // 确保输入是字符串类型，防止undefined或null导致的问题
+      if (typeof sectionClass !== 'string') {
+        return 'policyInfo'
+      }
+      return sectionToTabMap[sectionClass] || 'policyInfo'
     }
   }
 }

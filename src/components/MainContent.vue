@@ -12,8 +12,8 @@
     <!-- AI模块页面 -->
     <AIModulesSection v-if="currentPage === 'ai-modules'" />
 
-    <!-- 规则系统页面 -->
-    <RulesSection v-if="currentPage === 'rules'" />
+    <!-- 规则系统页面 暂时不展示 -->
+    <!-- <RulesSection v-if="currentPage === 'rules'" /> -->
 
     <!-- 外包考勤系统页面 -->
     <AttendanceSection v-if="currentPage === 'attendance'" />
@@ -37,7 +37,7 @@ import WelcomeSection from './sections/WelcomeSection.vue'
 import AutomationSection from './sections/AutomationSection.vue'
 import PluginTable from './PluginTable.vue'
 import AIModulesSection from './sections/AIModulesSection.vue'
-import RulesSection from './sections/RulesSection.vue'
+// import RulesSection from './sections/RulesSection.vue'
 import AttendanceSection from './sections/AttendanceSection.vue'
 import SunshineSection from './sections/SunshineSection.vue'
 import UpdatesSection from './sections/UpdatesSection.vue'
@@ -57,7 +57,7 @@ export default {
     AutomationSection,
     PluginTable,
     AIModulesSection,
-    RulesSection,
+    // RulesSection,
     AttendanceSection,
     SunshineSection,
     UpdatesSection,

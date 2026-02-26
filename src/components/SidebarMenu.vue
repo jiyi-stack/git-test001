@@ -9,7 +9,7 @@
           data-page="home"
           @click="handleItemClick('home')"
         >
-          <i class="fas fa-home"></i>
+          <img src="@/assets/foreword.svg" alt="" />
           <span>前言</span>
         </li>
 
@@ -19,7 +19,7 @@
           data-page="automation"
           @click="handleItemClick('automation')"
         >
-          <i class="fas fa-code"></i>
+          <img src="@/assets/script.svg" alt="" />
           <span>脚本自动化</span>
         </li>
 
@@ -29,8 +29,8 @@
           data-page="plugins"
           @click="handleItemClick('plugins')"
         >
-          <i class="fas fa-puzzle-piece"></i>
-          <span>脚本插件</span>
+          <img src="@/assets/plugins.svg" alt="" />
+          <span>插件介绍</span>
         </li>
 
         <li
@@ -39,8 +39,8 @@
           data-page="ai-modules"
           @click="handleItemClick('ai-modules')"
         >
-          <i class="fas fa-robot"></i>
-          <span>AI 大模型</span>
+          <img src="@/assets/xiaoyang.svg" alt="" />
+          <span>AI 助手</span>
           <i
             class="fas fa-chevron-down chevron"
             :class="{ rotate: isSubmenuOpen('ai-modules') }"
@@ -50,14 +50,14 @@
         <!-- AI模块的子菜单 -->
         <li class="submenu" :class="{ show: isSubmenuOpen('ai-modules') }">
           <ul>
-            <li
+            <!-- <li
               class="submenu-item"
               :class="{ active: currentPage === 'rules' }"
               data-page="rules"
               @click.stop="handleSubItemClick('rules')"
             >
               规则系统
-            </li>
+            </li> -->
             <li
               class="submenu-item"
               :class="{ active: currentPage === 'attendance' }"
@@ -74,27 +74,23 @@
             >
               智能运维平台
             </li>
+            <li
+              class="submenu-item"
+              :class="{ active: currentPage === 'sunshine' }"
+              data-page="sunshine"
+              @click.stop="handleSubItemClick('sunshine')"
+            >
+              阳光灵思图
+            </li>
+            <li
+              class="submenu-item"
+              :class="{ active: currentPage === 'pdftool' }"
+              data-page="pdftool"
+              @click.stop="handleSubItemClick('pdftool')"
+            >
+              PDF工具
+            </li>
           </ul>
-        </li>
-
-        <li
-          class="menu-item"
-          :class="{ active: currentPage === 'sunshine' }"
-          data-page="sunshine"
-          @click="handleItemClick('sunshine')"
-        >
-          <i class="fas fa-sun"></i>
-          <span>阳光灵思图</span>
-        </li>
-
-        <li
-          class="menu-item"
-          :class="{ active: currentPage === 'pdftool' }"
-          data-page="pdftool"
-          @click="handleItemClick('pdftool')"
-        >
-          <i class="fas fa-file-pdf"></i>
-          <span>PDF工具</span>
         </li>
       </ul>
     </nav>
@@ -228,6 +224,15 @@ export default {
   color: #4b5563;
 }
 
+.menu-item img {
+  transition: filter 0.2s;
+}
+
+/* .menu-item.active img {
+  filter: brightness(0) saturate(100%) invert(33%) sepia(98%) saturate(2071%)
+    hue-rotate(212deg) brightness(95%) contrast(97%);
+} */
+
 .menu-item span {
   margin-left: 12px;
   color: #1f2937;
@@ -253,7 +258,7 @@ export default {
 }
 
 .submenu-item {
-  padding: 12px 48px;
+  padding: 12px 70px;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -265,6 +270,6 @@ export default {
 .submenu-item.active {
   background-color: rgba(37, 99, 235, 0.1);
   border-left: 3px solid #2563eb;
-  padding-left: 45px;
+  padding-left: 70px;
 }
 </style>

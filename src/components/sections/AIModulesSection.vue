@@ -1,7 +1,7 @@
 <template>
   <section class="aiSection">
     <div class="pageHead">
-      <h1 class="pageTitle">AI 大模型对话</h1>
+      <h1 class="pageTitle">AI 助手智能对话</h1>
       <p class="pageDesc">
         如何使用AI智能对话，将从以下几个方面分别介绍使用方法：
       </p>
@@ -9,11 +9,11 @@
 
     <div class="aiModules">
       <ul>
-        <li>规则系统</li>
+        <!-- <li>规则系统</li> -->
         <li>外包考勤系统</li>
         <li>智能运维平台</li>
-        <!-- <li>阳光灵思图</li> -->
-        <!-- <li>PDF工具</li> -->
+        <li>阳光灵思图</li>
+        <li>PDF工具</li>
       </ul>
     </div>
   </section>

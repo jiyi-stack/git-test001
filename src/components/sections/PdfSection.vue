@@ -74,7 +74,7 @@
 // import FontDecration from '@/components/FontDecration.vue'
 
 export default {
-  name: 'RulesSection',
+  name: 'PdfSection',
   components: {
     // FontDecration
   },
