@@ -3,7 +3,11 @@
     <div class="page-header">
       <h1 class="page-title">智能运维平台</h1>
       <p class="page-description">
-        智能运维平台是一个处理一些契约日常运维功能，晓阳ai可以访问查询查询保单数据、轨迹、报文等。
+        智能运维平台是一个处理一些契约日常运维功能，晓阳ai可以访问查询查询保单数据、轨迹、报文等。智能运维平台地址：<a
+          href="https://www.iconfont.cn/"
+          target="_blank"
+          >https://sunshine-ideas.xmind.net/</a
+        >
       </p>
     </div>
     <div class="rule-content">
@@ -56,21 +60,20 @@
           <h3>✅ 查询保单信息</h3>
           <ul>
             <li>
-              1. 进入晓阳AI对话模块，点击卡片，选择“规则代码生成”。
+              1.
+              进入晓阳AI对话模块，点击智能运维平台卡片，在对话框选择模板，这里包含查询保单信息、查询保单轨迹、查询保单交互报文、查询保单请求数据、查询历史保单信息的模板。
               <div>
-                <img src="@/assets/down1.png" alt="" style="width: 80%" />
+                <img
+                  src="@/assets/policytepm.png"
+                  alt=""
+                  style="width: 50%; margin-top: 12px"
+                />
               </div>
             </li>
             <li>
               2.
-              在已有模板中，用户可以通过输入特定的规则描述，自动生成相应的规则代码。
+              选择查询保单信息模板，会出现“查询投保单号为xxxx的保单信息”，替换xxxx为具体的投保单号，发送给晓阳ai，它会返回该投保单号的具体信息。
               <br />
-              <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
-              </div>
-            </li>
-            <li>
-              3. 这是生成的代码，可以直接插入使用
               <div class="imgStyle">
                 <img src="@/assets/img.png" alt="" />
               </div>
@@ -83,15 +86,7 @@
           <h3>✅ 查询保单轨迹</h3>
           <ul>
             <li>
-              1.
-              在对话框中输入规则描述，点击“规则检索”按钮，系统会根据描述进行规则检索。
-              <div class="imgStyle">
-                <img src="@/assets/img.png" alt="" />
-              </div>
-            </li>
-            <li>
-              2. 用户可以搜索已有的规则，快速找到所需的信息。
-              <br />
+              选择查询保单轨迹模板，会出现“查询投保单号为xxxx的保单处理轨迹”，同上，替换具体的投保单号，发送给晓阳ai，便会查询该投保单号的轨迹信息。
               <div class="imgStyle">
                 <img src="@/assets/img.png" alt="" />
               </div>
@@ -104,7 +99,7 @@
           <h3>✅ 查询保单交互报文</h3>
           <ul>
             <li>
-              1. 用户可以查找和使用各种规则工具方法，提高工作效率。
+              选择查询保单交互报文模板，会出现“查询投保单号为xxxx的保单交互报文”，同上，替换具体的投保单号，发送给晓阳ai，便会查询该投保单号的交互报文。
               <div class="imgStyle">
                 <img src="@/assets/img.png" alt="" />
               </div>
@@ -117,7 +112,7 @@
           <h3>✅ 查询保单请求数据</h3>
           <ul>
             <li>
-              1. 用户可以查找和使用各种规则工具方法，提高工作效率。
+              选择模板，“查询投保单号为xxxx的保单请求数据”，替换具体的投保单号，发送给晓阳ai，便会查询该投保单号的请求数据。
               <div class="imgStyle">
                 <img src="@/assets/img.png" alt="" />
               </div>
@@ -130,7 +125,7 @@
           <h3>✅ 查询历史保单信息</h3>
           <ul>
             <li>
-              1. 用户可以查找和使用各种规则工具方法，提高工作效率。
+              选择查询历史保单信息模板，同上，替换具体的投保单号，发送给晓阳ai，便会查询该投保单号的历史保单信息。
               <div class="imgStyle">
                 <img src="@/assets/img.png" alt="" />
               </div>

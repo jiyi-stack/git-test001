@@ -64,13 +64,12 @@
           <h3>✅ 登录及首页介绍</h3>
           <ul>
             <li>
-              1. 以<i> V0.5.0</i
+              1. 以晓阳AI助手<i> <b> V0.5.0</b></i
               >为例，打开晓阳AI助手后，使用企业微信扫码登录，登录成功后进入首页
               <div>
                 <img
                   style="max-height: 50vh; margin: 16px 6px"
                   src="@/assets/login-pic.png"
-                  alt=""
                 />
               </div>
             </li>
@@ -91,19 +90,17 @@
                 <img
                   style="max-height: 50vh; margin: 16px 6px"
                   src="@/assets/ai-index.png"
-                  alt=""
                 />
               </div>
             </li>
             <li>
-              3. 点击标题，可以跳转到脚本详情页面;<br />
+              3. 点击查看按钮，可以跳转到脚本详情页面;<br />
               &nbsp;&nbsp;&nbsp;
               在这里可以单独测试、编辑和删除具体某一条步骤，也可以更改脚本名称
               <div>
                 <img
                   style="max-height: 50vh; margin: 16px 6px"
                   src="@/assets/auto-detaile.png"
-                  alt=""
                 />
               </div>
             </li>
@@ -115,17 +112,17 @@
           <h3>✅ 如何录制脚本</h3>
           <ul>
             <li>
-              1. 点击下方第二个菜单图标，进入新建页面，支持两种方式：
+              1. 点击页面下方第二个菜单图标，进入新建页面，支持两种方式：
               <span><img src="@/assets/record.svg" alt="" /> 录制脚本</span
-              >和<span
-                ><img src="@/assets/add.svg" alt="" /> 手动点击添加步骤</span
-              >
+              >和<span><img src="@/assets/add.svg" /> 手动点击添加步骤</span>
+              <br />
+              <img src="@/assets/foottepm.png" alt="" />
             </li>
             <li>
               2. 顶部输入框输入脚本流程名称，未输入将默认脚本名称， 请知悉。
               <br />
               <div class="imgStyle">
-                <img src="@/assets/aoto-tittle.png" alt="" />
+                <img src="@/assets/aoto-tittle.png" />
               </div>
             </li>
             <li>
@@ -138,14 +135,13 @@
               <div class="tip-box">
                 <span class="tip-icon">提示：</span>
                 <span class="tip-content">
-                  录制过程中，需要操作慢一点，当左下角显示"识别中..."时，请不要操作，否则步骤可能会丢失</span
+                  录制过程中，需要操作慢一点，当左下角显示"识别中..."时，请不要操作，否则步骤可能会丢失！</span
                 >
               </div>
               <br />
               <div>
                 <img
                   src="@/assets/auto-start.gif"
-                  alt=""
                   style="width: 280px; margin: 16px 0 0 0"
                 />
               </div>
@@ -153,13 +149,13 @@
             <li>
               5.点击停止录制，再次点击返回，可以看见返回刚刚已录入的脚本详情
               <div class="imgStyle">
-                <img src="@/assets/auto-detaile2.png" alt="" />
+                <img src="@/assets/auto-detaile2.png" />
               </div>
             </li>
             <li>
               6.点击执行程序可以自动执行刚刚手动操作的步骤，执行完成会自动返回首页
               <div class="imgStyle">
-                <img src="@/assets/auto-run.gif" alt="" />
+                <img src="@/assets/auto-run.gif" />
               </div>
             </li>
           </ul>
@@ -173,12 +169,11 @@
             <li>
               2. 将鼠标悬浮到已添加的步骤上时，会自动悬浮显示<img
                 src="@/assets/addStep.svg"
-                alt=""
               />
               添加按钮，点击后即可在插入在该步骤后面，添加新步骤再执行
               <br />
               <div class="imgStyle">
-                <img src="@/assets/auto-add.gif" alt="" />
+                <img src="@/assets/auto-add.gif" />
               </div>
             </li>
           </ul>
@@ -192,26 +187,22 @@
               1.
               首先进入首页，点击想要编辑的脚本，这里支持修改脚本名称，新增、修改、删除、移动步骤，如图所示：
               <div class="imgStyle">
-                <img src="@/assets/auto-edit.gif" alt="" />
+                <img src="@/assets/auto-edit.gif" />
               </div>
             </li>
             <li style="color: #333">
-              ·新增：与手动添加步骤类似，悬浮到已有步骤上，点击新增动画图标，可以添加新的步骤
+              <b>新增：</b>
+              与手动添加步骤类似，悬浮到已有步骤上，点击新增动画图标，可以添加新的步骤
               <br />
             </li>
             <br />
             <li style="color: #333">
-              · 修改：悬浮到已有步骤上，点击修改图标，可以修改该步骤
+              <b>删除：</b> 悬浮到已有步骤上，点击删除图标，可以删除该步骤
               <br />
             </li>
             <li style="color: #333">
-              · 删除：悬浮到已有步骤上，点击删除图标，可以删除该步骤
-              <br />
-            </li>
-            <li style="color: #333">
-              ·
-              移动：悬浮到已有步骤名称上，点击可以拖动该步骤到指定位置，其余步骤顺序顺移
-              <br />
+              <b>移动：</b>
+              悬浮到已有步骤名称上，点击可以拖动该步骤到指定位置，其余步骤顺序顺移
             </li>
             <li>
               2.当前脚本详情页里，也支持录制更新、执行和保存脚本等信息
@@ -219,21 +210,20 @@
               <div class="imgStyle">
                 <img
                   src="@/assets/auto-menu.png"
-                  alt=""
                   style="width: 350px; margin: 16px 0 0 0"
                 />
               </div>
             </li>
             <li style="color: #333">
-              · 执行：上方蓝色执行按钮表示执行该脚本全部内容
+              <b>执行：</b>上方蓝色执行按钮表示执行该脚本全部内容
               <br />
             </li>
             <li style="color: #333">
-              · 录制：点击后，可以在弹出框中，选择覆盖或追加步骤
+              <b>录制：</b>点击后，可以在弹出框中，选择覆盖或追加步骤
               <br />
             </li>
             <li style="color: #333">
-              · 保存：点击保存按钮，即可保存当前已编辑的脚本
+              <b>保存：</b>点击保存按钮，即可保存当前已编辑的脚本
               <br />
             </li>
           </ul>

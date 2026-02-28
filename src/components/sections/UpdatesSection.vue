@@ -1,7 +1,7 @@
 <template>
   <section class="updatesSection">
     <div class="sectionHeader">
-      <h2 class="pageTitle">最近更新功能</h2>
+      <h2>最近更新功能</h2>
       <button
         class="checkUpdateBtn"
         @click="checkForUpdates"
@@ -11,60 +11,15 @@
         检查版本
       </button>
     </div>
+
     <div class="updatesCard">
       <div class="updateList">
-        <div class="updateItem">
-          <div class="updateBullet" id="item-1"></div>
+        <div v-for="update in updates" :key="update.id" class="updateItem">
+          <div class="updateBullet" :id="update.id"></div>
           <div class="updateContent">
-            <h3 class="updateTitle">外包考勤系统新增考勤信息下载表格功能</h3>
-            <p class="updateDescription">
-              下载考勤信息，包含每日打卡数据，每月工时汇总/加班/调休工时等信息
-            </p>
-            <p class="updateDate">2024-01-15</p>
-          </div>
-        </div>
-
-        <div class="updateItem">
-          <div class="updateBullet" id="item-2"></div>
-          <div class="updateContent">
-            <h3 class="updateTitle">脚本录制功能升级</h3>
-            <p class="updateDescription">
-              新增智能操作识别，提高识别速度，减少在录制卡顿的现象
-            </p>
-            <p class="updateDate">2024-01-10</p>
-          </div>
-        </div>
-
-        <div class="updateItem">
-          <div class="updateBullet" id="item-3"></div>
-          <div class="updateContent">
-            <h3 class="updateTitle">新增脚本插件</h3>
-            <p class="updateDescription">
-              新增脚本插件Pdf处理工具插件，支持合并，压缩pdf文件
-            </p>
-            <p class="updateDate">2024-01-05</p>
-          </div>
-        </div>
-
-        <div class="updateItem">
-          <div class="updateBullet" id="item-4"></div>
-          <div class="updateContent">
-            <h3 class="updateTitle">脚本录制跳转交互优化</h3>
-            <p class="updateDescription">
-              跳转逻辑发生变化，点击录制后直接开启全屏记录
-            </p>
-            <p class="updateDate">2024-01-02</p>
-          </div>
-        </div>
-
-        <div class="updateItem">
-          <div class="updateBullet" id="item-5"></div>
-          <div class="updateContent">
-            <h3 class="updateTitle">脚本录制功能升级</h3>
-            <p class="updateDescription">
-              新增智能变量识别，提高识别速度，减少在录制卡顿的现象
-            </p>
-            <p class="updateDate">2024-01-01</p>
+            <h3>{{ update.title }}</h3>
+            <p>{{ update.description }}</p>
+            <p class="updateDate">{{ update.date }}</p>
           </div>
         </div>
       </div>
@@ -78,8 +33,47 @@ export default {
   data() {
     return {
       isLoading: false,
-      currentVersion: 'v1.1.9', // 当前版本
-      latestVersion: 'v2.1.0' // 最新版本
+      currentVersion: 'v1.1.9',
+      latestVersion: 'v2.1.0',
+      updates: [
+        {
+          id: 'item-1',
+          title: '外包考勤系统新增考勤信息下载表格功能',
+          description:
+            '下载考勤信息，包含每日打卡数据，每月工时汇总/加班/调休工时等信息',
+          date: '2024-01-15'
+        },
+        {
+          id: 'item-2',
+          title: '脚本录制功能升级',
+          description: '新增智能操作识别，提高识别速度，减少在录制卡顿的现象',
+          date: '2024-01-10'
+        },
+        {
+          id: 'item-3',
+          title: '新增脚本插件',
+          description: '新增脚本插件Pdf处理工具插件，支持合并，压缩pdf文件',
+          date: '2024-01-05'
+        },
+        {
+          id: 'item-4',
+          title: '脚本录制跳转交互优化',
+          description: '跳转逻辑发生变化，点击录制后直接开启全屏记录',
+          date: '2024-01-02'
+        },
+        {
+          id: 'item-5',
+          title: '脚本录制功能升级',
+          description: '新增智能变量识别，提高识别速度，减少在录制卡顿的现象',
+          date: '2024-01-01'
+        },
+        {
+          id: 'item-6',
+          title: '脚本编辑',
+          description: '新增脚本编辑功能，用户可以直接在脚本中编辑和调试代码',
+          date: '2024-01-08'
+        }
+      ]
     }
   },
   computed: {
@@ -94,27 +88,19 @@ export default {
         : `您当前的版本是${this.currentVersion}，请更新`
     },
     checkForUpdates() {
-      // 添加加载状态
       this.isLoading = true
-
-      // 模拟检查更新过程
       setTimeout(() => {
-        // 移除加载状态
         this.isLoading = false
+        const modal = document.createElement('div')
+        modal.className = 'update-modal'
 
-        // 创建更新提示模态框
-        const updateModal = document.createElement('div')
-        updateModal.className = 'update-modal'
-
-        // 根据版本状态确定图标和文本
         const iconClass = this.isLatestVersion
           ? 'fas fa-check-circle'
           : 'fas fa-exclamation-triangle'
         const iconColor = this.isLatestVersion ? '#10b981' : '#f59e0b'
         const statusText = this.getVersionText()
 
-        // 使用字符串模板直接插入值，而不是Vue插值
-        updateModal.innerHTML = `
+        modal.innerHTML = `
           <div class="modal-content">
             <div class="modal-header">
               <h3>检查更新</h3>
@@ -133,13 +119,11 @@ export default {
                     晓阳AI助手 (${this.latestVersion})
                   </a>
                 </div>
-
               </div>
             </div>
           </div>
         `
 
-        // 添加模态框样式
         const style = document.createElement('style')
         style.textContent = `
           .update-modal {
@@ -148,7 +132,7 @@ export default {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.5);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -162,7 +146,7 @@ export default {
           }
 
           .modal-content {
-            background-color: white;
+            background: white;
             border-radius: 8px;
             width: 90%;
             max-width: 500px;
@@ -171,14 +155,8 @@ export default {
           }
 
           @keyframes slideUp {
-            from {
-              transform: translateY(50px);
-              opacity: 0;
-            }
-            to {
-              transform: translateY(0);
-              opacity: 1;
-            }
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
           }
 
           .modal-header {
@@ -200,7 +178,6 @@ export default {
             font-size: 24px;
             color: #9ca3af;
             cursor: pointer;
-            transition: color 0.2s;
           }
 
           .close-btn:hover {
@@ -219,7 +196,6 @@ export default {
           }
 
           .update-status i {
-            color: #10b981;
             font-size: 24px;
           }
 
@@ -247,15 +223,14 @@ export default {
             align-items: center;
             gap: 10px;
             padding: 10px 16px;
-            background-color: #f9fafb;
+            background: #f9fafb;
             border-radius: 6px;
             text-decoration: none;
             color: #1f2937;
-            transition: background-color 0.2s;
           }
 
           .download-link:hover {
-            background-color: #f3f4f6;
+            background: #f3f4f6;
           }
 
           .download-link i {
@@ -263,21 +238,18 @@ export default {
           }
         `
         document.head.appendChild(style)
+        document.body.appendChild(modal)
 
-        document.body.appendChild(updateModal)
-
-        // 添加关闭按钮功能
-        const closeBtn = updateModal.querySelector('.close-btn')
+        const closeBtn = modal.querySelector('.close-btn')
         closeBtn.addEventListener('click', function () {
-          updateModal.style.animation = 'fadeOut 0.3s ease-out'
+          modal.style.animation = 'fadeOut 0.3s ease-out'
           setTimeout(() => {
-            document.body.removeChild(updateModal)
+            document.body.removeChild(modal)
           }, 300)
         })
 
-        // 点击模态框外部关闭
-        updateModal.addEventListener('click', function (e) {
-          if (e.target === updateModal) {
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) {
             closeBtn.click()
           }
         })
@@ -295,21 +267,64 @@ export default {
   flex: 1;
   overflow: hidden;
   margin-top: 32px;
-  margin-bottom: 8px;
 }
 
+/* 章节头部样式 */
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+}
+
+.checkUpdateBtn {
+  background: white;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.checkUpdateBtn:hover {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.checkUpdateBtn.loading i {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 卡片样式 */
 .updatesCard {
-  background-color: #fff;
+  background: white;
   border-radius: 8px;
   padding: 32px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   flex: 1;
-  /* overflow-y: auto; */
-  position: relative;
-  /* 自定义滚动条样式 */
-  scrollbar-width: thin;
-  scrollbar-color: #cbd5e1 #f1f5f9;
   height: 200px;
+  position: relative;
 }
 
 .updateList {
@@ -327,15 +342,15 @@ export default {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #9ca3af;
+  background: #9ca3af;
   margin-top: 8px;
   flex-shrink: 0;
 }
 
-.update-item:first-child .updateBullet {
+.updateItem:first-child .updateBullet {
   width: 10px;
   height: 10px;
-  background-color: #2563eb;
+  background: #2563eb;
   outline: 5px solid #b7ceff;
   animation: bulletPulse 2s infinite ease-in-out;
   z-index: 10;
@@ -344,14 +359,12 @@ export default {
 @keyframes bulletPulse {
   0% {
     outline-width: 0px;
-    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+    box-shadow: 0 0 0 rgba(37, 99, 235, 0.4);
   }
-
   50% {
     outline-width: 3px;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
   }
-
   100% {
     outline-width: 0px;
     box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
@@ -366,85 +379,26 @@ export default {
   top: 16px;
   bottom: -30px;
   width: 2px;
-  background-color: #e5e7eb;
+  background: #e5e7eb;
 }
 
 .updateContent {
   margin-left: 12px;
 }
 
-.updateTitle {
+.updateContent h3 {
   font-weight: 600;
   margin-bottom: 8px;
   color: #1f2937;
 }
 
-.updateDescription {
+.updateContent p {
   color: #4b5563;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 .updateDate {
   color: #9ca3af;
   font-size: 14px;
-}
-
-/* 章节头部样式 */
-.sectionHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 16px;
-}
-
-.pageTitle {
-  margin-bottom: 0;
-}
-
-.checkUpdateBtn {
-  background-color: white;
-  color: #4b5563;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  overflow: hidden;
-  position: relative;
-  transition: color 0.3s;
-}
-
-.checkUpdateBtn:hover {
-  background-color: #2563eb;
-  color: white;
-  border-color: #2563eb;
-  transform: translateY(-1px);
-}
-
-.checkUpdateBtn:active {
-  background-color: #1d4ed8;
-  transform: translateY(0);
-}
-
-.checkUpdateBtn i {
-  transition: transform 0.3s;
-}
-
-.checkUpdateBtn.loading i {
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 </style>

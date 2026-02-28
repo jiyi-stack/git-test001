@@ -41,7 +41,6 @@
               <div>
                 <img
                   src="@/assets/AIpdf.png"
-                  alt=""
                   style="width: 1000px; padding-top: 12px"
                 />
               </div>
@@ -60,7 +59,7 @@
             <li>
               操作步骤同上,左侧的导航栏菜单,可以实现word、图片、ppt转成PDF文件,轻量便捷
               <div class="imgStyle">
-                <!-- <img src="@/assets/img.png" alt="" /> -->
+                <img src="@/assets/img.png" />
               </div>
             </li>
           </ul>

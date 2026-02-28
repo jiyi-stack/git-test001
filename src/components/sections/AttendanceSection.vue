@@ -63,13 +63,14 @@
               <div>
                 <img
                   src="@/assets/down2.png"
-                  alt=""
                   style="width: 700px; padding-top: 12px"
                 />
               </div>
             </li>
             <li>
-              2.如图所示，我们的考勤系统包含组长端和组员端。组长负责审批组员的考勤信息,并可以设置考勤规则。组员每月查询考勤信息，处理异常数据，查询调休信息，下载考勤表的功能，下面我将依次为您介绍该系统的使用方法
+              2.如图所示，我们的考勤系统包含 <b>组长端</b> 和
+              <b>组员端</b
+              >。组长负责审批组员的考勤信息,并可以设置考勤规则。组员每月查询考勤信息，处理异常数据，查询调休信息，下载考勤表的功能，下面我将依次为您介绍该系统的使用方法
               <br />
             </li>
           </ul>
@@ -80,12 +81,11 @@
           <h3>✅ 考勤详情与汇总信息</h3>
           <ul>
             <li>
-              1.在输入框中选择模板，查询当月考勤详情或汇总。
+              1. 在输入框中选择模板，查询当月考勤详情或汇总。
               <div>
                 <!-- <img src="@/assets/img.png" alt="" /> -->
                 <img
                   src="@/assets/attendenceAll.png"
-                  alt=""
                   style="width: 650px; padding-top: 12px"
                 />
               </div>
@@ -95,7 +95,6 @@
               <div class="imgStyle">
                 <img
                   src="@/assets/attendenceAll.png"
-                  alt=""
                   style="width: 1000px; padding-top: 12px"
                 />
               </div>
@@ -110,10 +109,8 @@
             <li>
               1.在输入框中选择模板，查询当月考勤汇总。
               <div>
-                <!-- <img src="@/assets/img.png" alt="" /> -->
                 <img
                   src="@/assets/AIpdf.png"
-                  alt=""
                   style="width: 1000px; padding-top: 12px"
                 />
               </div>
@@ -123,7 +120,6 @@
               <div>
                 <img
                   src="@/assets/AIpdf.png"
-                  alt=""
                   style="width: 1000px; padding-top: 12px"
                 />
               </div>
@@ -140,7 +136,6 @@
               <div class="imgStyle">
                 <img
                   src="@/assets/AIpdf.png"
-                  alt=""
                   style="width: 1000px; padding-top: 12px"
                 />
               </div>
@@ -157,7 +152,6 @@
               <div class="imgStyle">
                 <img
                   src="@/assets/AIpdf.png"
-                  alt=""
                   style="width: 1000px; padding-top: 12px"
                 />
               </div>
