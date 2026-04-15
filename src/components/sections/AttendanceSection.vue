@@ -94,8 +94,26 @@
               2.晓阳ai会根据打卡时间，异常时长，调休时长，正常时长，加班时长，请假时长，缺勤时长等，生成对应的考勤详情或汇总表格。
               <div class="imgStyle">
                 <img
-                  src="@/assets/attendenceAll.png"
+                  src="@/assets/attendenceDetails1.png"
                   style="width: 1000px; padding-top: 12px"
+                />
+              </div>
+            </li>
+            <li>
+              3.查看考勤详情的表格，下载详情表
+              <div class="imgStyle">
+                <img
+                  src="@/assets/attendceDownload.png"
+                  style="width: 800px; padding-top: 12px"
+                />
+              </div>
+              <div>
+                &nbsp; &nbsp;根据表格底部总结，将发送邮件给组长 →
+                个人处理异常部分完成
+                <br />
+                <img
+                  src="@/assets/attendceDownload2.png"
+                  style="width: 500px; padding: 12px"
                 />
               </div>
             </li>
@@ -106,20 +124,12 @@
         <div class="recordSteps handleExceptions">
           <h3>✅ 考勤异常信息处理</h3>
           <ul>
+            <li>1.在输入框中选择模板，查询当月考勤汇总。</li>
             <li>
-              1.在输入框中选择模板，查询当月考勤汇总。
+              2.等待晓阳ai提供异常数据，查看表格，提交自己的异常原因与时长，批量提交，异常数据处理完成。组长审批后，异常数据处理完成，显示已归档状态。
               <div>
                 <img
-                  src="@/assets/AIpdf.png"
-                  style="width: 1000px; padding-top: 12px"
-                />
-              </div>
-            </li>
-            <li>
-              2.等待晓阳ai提供异常数据，查看表格，提交自己的异常原因与时长，批量提交，异常数据处理完成。
-              <div>
-                <img
-                  src="@/assets/AIpdf.png"
+                  src="@/assets/attendenceDetails2.png"
                   style="width: 1000px; padding-top: 12px"
                 />
               </div>
@@ -135,7 +145,7 @@
               在输入框中选择模板，查询当月调休信息。晓阳ai会提供调休信息表格。
               <div class="imgStyle">
                 <img
-                  src="@/assets/AIpdf.png"
+                  src="@/assets/attendenceDetails3.png"
                   style="width: 1000px; padding-top: 12px"
                 />
               </div>

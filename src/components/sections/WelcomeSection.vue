@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .welcome h4 {
-  font-size: 20px;
+  font-size: 18px;
   color: #374151;
   margin-bottom: 16px;
 }
@@ -85,7 +85,7 @@ export default {
 }
 
 .icon i {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .purple {
@@ -113,7 +113,7 @@ export default {
 }
 
 .card h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 12px;
   color: #1f2937;

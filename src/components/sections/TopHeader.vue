@@ -2,7 +2,7 @@
   <header class="header">
     <div class="logo">
       <img src="@/assets/aiSpt.gif" alt="Logo" />
-      <span>晓阳AI | 帮助中心</span>
+      <span>晓阳AI · 帮助中心</span>
     </div>
     <div class="search">
       <input

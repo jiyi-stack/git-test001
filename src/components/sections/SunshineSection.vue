@@ -15,7 +15,7 @@
 
     <div class="sunshine-content">
       <div class="sunshine-tools">
-        <img src="@/assets/xmind.jpg" @click="goXmind" />
+        <video src="@/assets/graphMind.mp4" @click="goXmind" controls></video>
       </div>
     </div>
   </section>
@@ -56,7 +56,7 @@ export default {
   overflow: hidden;
 }
 
-.sunshine-tools img {
+.sunshine-tools video {
   max-width: 100%;
   max-height: 600px;
   object-fit: contain;
@@ -64,7 +64,7 @@ export default {
   transition: transform 0.2s;
 }
 
-.sunshine-tools img:hover {
+.sunshine-tools video:hover {
   transform: scale(1.02);
 }
 </style>

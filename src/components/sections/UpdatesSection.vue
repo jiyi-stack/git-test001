@@ -1,7 +1,7 @@
 <template>
   <section class="updatesSection">
     <div class="sectionHeader">
-      <h2>最近更新功能</h2>
+      <h3>最近更新功能</h3>
       <button
         class="checkUpdateBtn"
         @click="checkForUpdates"
@@ -17,8 +17,8 @@
         <div v-for="update in updates" :key="update.id" class="updateItem">
           <div class="updateBullet" :id="update.id"></div>
           <div class="updateContent">
-            <h3>{{ update.title }}</h3>
-            <p>{{ update.description }}</p>
+            <h4 style="margin-bottom: 8px">{{ update.title }}</h4>
+            <p style="font-size: 16px">{{ update.description }}</p>
             <p class="updateDate">{{ update.date }}</p>
           </div>
         </div>
@@ -169,13 +169,13 @@ export default {
 
           .modal-header h3 {
             margin: 0;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             color: #1f2937;
           }
 
           .close-btn {
-            font-size: 24px;
+            font-size: 22px;
             color: #9ca3af;
             cursor: pointer;
           }
@@ -196,18 +196,18 @@ export default {
           }
 
           .update-status i {
-            font-size: 24px;
+            font-size: 22px;
           }
 
           .update-status p {
             margin: 0;
             color: #1f2937;
-            font-size: 16px;
+            font-size: 14px;
           }
 
           .download-options h4 {
             margin: 0 0 12px 0;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
             color: #1f2937;
           }
@@ -266,7 +266,7 @@ export default {
   flex-direction: column;
   flex: 1;
   overflow: hidden;
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 /* 章节头部样式 */
